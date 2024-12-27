@@ -131,6 +131,10 @@ a.temporal:hover {
     align-items: center;
 }
 
+.brain:hover {
+    transform: scale(1.05);
+}
+
 .headshot {
     width: 100%
 }
@@ -156,25 +160,41 @@ h2 {
     z-index: 200;
     max-width: 2%;
 }
+.prefrontal:hover {
+    transform: scale(1.05);
+}
+
 
 .parietal {
     z-index: 200;
     max-width: 2.5%;
+}
+.parietal:hover {
+    transform: scale(1.05);
 }
 
 .occipital {
     z-index: 200;
     max-width: 1.75%;
 }
+.occipital:hover {
+    transform: scale(1.05);
+}
 
 .hippocampus {
     z-index: 200;
     max-width: 1.5%;
 }
+.hippocampus:hover {
+    transform: scale(1.05);
+}
 
 .temporal {
     z-index: 200;
     max-width: 2.5%;
+}
+.temporal:hover {
+    transform: scale(1.05);
 }
 
 .painting {
