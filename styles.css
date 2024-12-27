@@ -563,3 +563,13 @@ html {
     }
 
 }
+
+.dreams {
+    padding: 2em;
+    padding-left: 10em;
+    padding-right: 10em;
+}
+
+img.dreams {
+    max-width: 58%;
+}
