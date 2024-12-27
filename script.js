@@ -8,6 +8,23 @@ const parietal = document.querySelector('.parietal');
 const temporal = document.querySelector('.temporal');
 const occipital = document.querySelector('.occipital');
 
+// Select the favicon element
+const favicon = document.getElementById('favicon');
+
+// URLs for the active and inactive favicons
+const activeFavicon = 'assets/favicon-active.ico';
+const inactiveFavicon = 'assets/favicon-inactive.ico';
+
+// Event listener for visibility changes
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+        favicon.href = activeFavicon;
+    } else {
+        favicon.href = inactiveFavicon;
+    }
+});
+
+
 // Brain regions and their corresponding text anchors
 const regions = [
     {
