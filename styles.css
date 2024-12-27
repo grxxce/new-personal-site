@@ -93,6 +93,12 @@ footer {
     padding: 1rem;
 }
 
+footer {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
 h1 {
     padding-bottom: 1rem;
 }
