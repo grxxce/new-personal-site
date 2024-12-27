@@ -1,0 +1,336 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+@font-face {
+    font-family: HitchHiker;
+    src: url(fonts/hitch-hike.regular.otf);
+  }
+
+@font-face {
+    font-family: CMUSS;
+    src: url(fonts/cmunss.ttf)
+}
+@font-face {
+    font-family: CMUSS-bold;
+    src: url(fonts/cmunsx.ttf)
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    font-family: HitchHiker;
+    background-color: #F7F2EB;
+}
+
+.now {
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+
+
+p {
+    font-family: CMUSS;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+ol {
+    font-family: CMUSS;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+main ul {
+    font-family: CMUSS;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+.bold {
+    font-family: CMUSS-bold
+}
+
+.content-wrapper {
+    position: relative;
+    transform: translateY(0);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header a {
+    text-decoration: None;
+    color: black;
+}
+
+header, main, footer {
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+}
+
+h1 {
+    padding-bottom: 1rem;
+}
+
+header {
+    font-size: 30px;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+a {
+    color: #3D1E14;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
+}
+
+a.prefrontal:hover {
+    background-color: #B6DDC6;
+}
+
+a.hippocampus:hover {
+    background-color: #8BC7EA;
+}
+
+a.temporal:hover {
+    background-color: #E8CBF2;
+}
+
+.brain {
+    max-width:4%;
+    top: 5%;
+    z-index: 100;
+    transition: transform 0.3s ease-out;
+    align-items: center;
+}
+
+.headshot {
+    width:100%
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+section {
+    padding-top: 20px;
+    align-items: center;
+}
+
+h2 {
+    text-align: left;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.prefrontal {
+    z-index: 200;
+    max-width: 2%;
+}
+
+.parietal {
+    z-index: 200;
+    max-width: 2.5%;
+}
+
+.occipital {
+    z-index: 200;
+    max-width: 1.75%;
+}
+
+.hippocampus {
+    z-index: 200;
+    max-width: 1.5%;
+}
+
+.temporal {
+    z-index: 200;
+    max-width: 2.5%;
+}
+
+.painting {
+    max-width: 60%;
+    padding: 2rem;
+}
+
+.painting-landscape {
+    max-width: 80%;
+    padding: 2rem;
+}
+
+
+.past {
+}
+
+.thoughts {}
+
+.art {}
+
+.books {
+}
+
+
+a.thoughts:hover{
+    background-color: #F9C49E;
+}
+
+
+div {
+    text-align: left;
+}
+
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.book-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.book-item img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    filter: grayscale(1);
+    transition: filter 0.3s ease;
+}
+
+.book-item img:hover {
+    filter: grayscale(0);
+}
+
+.book-item p {
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+}
+
+/* Make the grid responsive */
+@media screen and (max-width: 768px) {
+    .books-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .books-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+    }
+}
+
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .brain {
+        max-width:14%;
+        top: 5%;
+        z-index: 100;
+        transition: transform 0.8s ease-out;
+        align-items: center;
+    }
+
+    .prefrontal {
+        max-width:7%;
+    }
+    .parietal {
+        max-width:7%;
+    }
+    .temporal {
+        max-width:7%;
+    }
+    .occipital {
+        max-width:7%;
+    }
+    .hippocampus {
+        max-width:7%;
+    }
+
+    main {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-top: 2rem;
+
+    }
+
+    .headshot {
+        max-width: 90%;
+    }
+
+
+    p {
+        font-size: 12px;
+    }
+
+    main ul {
+        font-family: CMUSS;
+        text-align: left;
+        font-size: 12px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive text */
+html {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+
+
