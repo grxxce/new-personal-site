@@ -13,12 +13,13 @@ html {
 @font-face {
     font-family: HitchHiker;
     src: url(fonts/hitch-hike.regular.otf);
-  }
+}
 
 @font-face {
     font-family: CMUSS;
     src: url(fonts/cmunss.ttf)
 }
+
 @font-face {
     font-family: CMUSS-bold;
     src: url(fonts/cmunsx.ttf)
@@ -34,9 +35,7 @@ body {
     background-color: #F7F2EB;
 }
 
-.now {
-
-}
+.now {}
 
 nav ul {
     display: flex;
@@ -86,7 +85,9 @@ header a {
     color: black;
 }
 
-header, main, footer {
+header,
+main,
+footer {
     width: 100%;
     max-width: 500px;
     padding: 1rem;
@@ -123,7 +124,7 @@ a.temporal:hover {
 }
 
 .brain {
-    max-width:4%;
+    max-width: 4%;
     top: 5%;
     z-index: 100;
     transition: transform 0.3s ease-out;
@@ -131,7 +132,7 @@ a.temporal:hover {
 }
 
 .headshot {
-    width:100%
+    width: 100%
 }
 
 nav a {
@@ -187,18 +188,16 @@ h2 {
 }
 
 
-.past {
-}
+.past {}
 
 .thoughts {}
 
 .art {}
 
-.books {
-}
+.books {}
 
 
-a.thoughts:hover{
+a.thoughts:hover {
     background-color: #F9C49E;
 }
 
@@ -230,10 +229,16 @@ div {
     filter: grayscale(1);
     transition: filter 0.3s ease;
 }
+.book-item.active img {
+    filter: grayscale(0);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
 
 .book-item img:hover {
     filter: grayscale(0);
 }
+
 
 .book-item p {
     font-size: 12px;
@@ -268,7 +273,7 @@ div {
     }
 
     .brain {
-        max-width:14%;
+        max-width: 14%;
         top: 5%;
         z-index: 100;
         transition: transform 0.8s ease-out;
@@ -276,19 +281,23 @@ div {
     }
 
     .prefrontal {
-        max-width:7%;
+        max-width: 7%;
     }
+
     .parietal {
-        max-width:7%;
+        max-width: 7%;
     }
+
     .temporal {
-        max-width:7%;
+        max-width: 7%;
     }
+
     .occipital {
-        max-width:7%;
+        max-width: 7%;
     }
+
     .hippocampus {
-        max-width:7%;
+        max-width: 7%;
     }
 
     main {
@@ -331,6 +340,199 @@ html {
         font-size: 14px;
     }
 }
+/* QUOTES AND DOODLES FORMATTING */
 
+.quote {
+    display: none; 
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
 
+.quote:hover {
+    transform: scale(1.05);
+}
 
+@media (min-width: 1200px) {
+    .quote {
+        display: block; 
+    }
+
+    @media (min-width: 1200px) {
+        .quote {
+            display: block; 
+        }
+    
+        #quote1 {
+            position: absolute;
+            top: 280px;
+            left: 14%;
+            max-width: 8%;
+            z-index: 400;
+        }
+    
+        #quote2 {
+            position: absolute;
+            top: 650px;
+            left: 12%;
+            max-width: 8%;
+            z-index: 400;
+        }
+    
+        #quote3 {
+            position: absolute;
+            top: 1000px;
+            left: 14%;
+            max-width: 8%;
+            z-index: 400;
+        }
+    
+        #quote4 {
+            position: absolute;
+            top: 280px;
+            right: 15%;
+            max-width: 10%;
+            z-index: 400;
+        }
+    
+        #quote5 {
+            position: absolute;
+            top: 650px;
+            right: 12%;
+            max-width: 10%;
+            z-index: 400;
+        }
+    
+        #quote6 {
+            position: absolute;
+            top: 1000px;
+            right: 18%;
+            max-width: 10%;
+            z-index: 400;
+        }
+    
+        #quote7 {
+            position: absolute;
+            top: 1350px;
+            left: 16%;
+            max-width: 8%;
+            z-index: 400;
+        }
+    
+        #quote8 {
+            position: absolute;
+            top: 1350px;
+            right: 14%;
+            max-width: 8%;
+            z-index: 400;
+        }
+    
+        #quote9 {
+            position: absolute;
+            top: 1700px;
+            left: 13%;
+            max-width: 8%;
+            z-index: 400;
+        }
+    
+        #quote10 {
+            position: absolute;
+            top: 1700px;
+            right: 16%;
+            max-width: 8%;
+            z-index: 400;
+        }
+    
+        #quote11 {
+            position: absolute;
+            top: 2050px;
+            left: 15%;
+            max-width: 8%;
+            z-index: 400;
+        }
+    
+        #quote12 {
+            position: absolute;
+            top: 2050px;
+            right: 13%;
+            max-width: 8%;
+            z-index: 400;
+        }
+    
+        #quote13 {
+            position: absolute;
+            top: 2400px;
+            left: 12%;
+            max-width: 8%;
+            z-index: 400;
+        }
+    
+        #quote14 {
+            position: absolute;
+            top: 2400px;
+            right: 15%;
+            max-width: 8%;
+            z-index: 400;
+        }
+    
+        #quote15 {
+            position: absolute;
+            top: 2750px;
+            left: 14%;
+            max-width: 8%;
+            z-index: 400;
+        }
+    
+        #quote16 {
+            position: absolute;
+            top: 2750px;
+            right: 17%;
+            max-width: 8%;
+            z-index: 400;
+        }
+
+        #s1 {
+            position: absolute;
+            top: 600px;
+            right: 30%;
+            max-width: 6%;
+            z-index: 400;
+        }
+        #s2 {
+            position: absolute;
+            top: 3200px;
+            left: 10%;
+            max-width: 3%;
+            z-index: 400;
+        }
+        #s3 {
+            position: absolute;
+            top: 1500px;
+            right: 10%;
+            max-width: 1%;
+            z-index: 400;
+        }
+        #s4 {
+            position: absolute;
+            top: 4000px;
+            right: 25%;
+            max-width: 3%;
+            z-index: 400;
+        }
+        #s5 {
+            position: absolute;
+            top: 2800px;
+            right: 12%;
+            max-width: 3%;
+            z-index: 400;
+        }
+        #s6 {
+            position: absolute;
+            top: 3400px;
+            left: 15%;
+            max-width: 1%;
+            z-index: 400;
+        }
+
+    }
+
+}

@@ -468,3 +468,52 @@ window.addEventListener('resize', () => {
     updatePositions();
     updateTextPositions(); // Add this line to update text positions during resize
 });
+
+
+//     QUOTES
+
+
+const quoteToBookMap = {
+    'quote1': 'book-greenlights',     
+    'quote2': 'book-achilles',   
+    'quote3': 'book-worlds',       
+    'quote4': 'book-shoe',    
+    'quote5': 'book-anthrop', 
+    'quote6': 'book-circus',
+    'quote7': 'book-women',     
+    'quote8': 'book-burn',   
+    'quote9': 'book-now',       
+    'quote10': 'book-gene',    
+    'quote11': 'book-dv', 
+    'quote12': 'book-exhal',
+    'quote13': 'book-musk',    
+    'quote14': 'book-steve', 
+    'quote15': 'book-daisy', 
+
+};
+
+// Add click handlers to all quotes
+document.querySelectorAll('.quote').forEach(quote => {
+    quote.addEventListener('click', function() {
+        const bookId = quoteToBookMap[this.id];
+        const bookElement = document.getElementById(bookId);
+        
+        if (bookElement) {
+            // Remove active class from all books
+            document.querySelectorAll('.book-item').forEach(book => {
+                book.classList.remove('active');
+            });
+            
+            // Add active class to target book
+            bookElement.classList.add('active');
+            
+            // Scroll to the book
+            bookElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Remove active class after 3 seconds
+            setTimeout(() => {
+                bookElement.classList.remove('active');
+            }, 3000);
+        }
+    });
+});
