@@ -210,6 +210,16 @@ function updateTextPositions() {
     }
 }
 
+const textContainer = document.createElement('div');
+textContainer.style.position = 'fixed';
+textContainer.style.top = '0';
+textContainer.style.left = '0';
+textContainer.style.width = '100%';
+textContainer.style.height = '100%';
+textContainer.style.pointerEvents = 'none';
+textContainer.style.zIndex = '1000';
+document.body.appendChild(textContainer);
+
 // Update brain click handler
 brain.addEventListener('click', () => {
     if (activeNeuralText) {
@@ -226,9 +236,7 @@ brain.addEventListener('click', () => {
     neuralText.style.opacity = '0';
     neuralText.style.transition = 'opacity 0.3s ease-in-out';
     
-    const container = brain.parentElement;
-    container.style.position = 'relative';
-    container.appendChild(neuralText);
+    textContainer.appendChild(neuralText);
     
     activeNeuralText = neuralText;
     updateTextPositions();
@@ -266,9 +274,7 @@ hippo.addEventListener('click', () => {
     hippoText.style.opacity = '0';
     hippoText.style.transition = 'opacity 0.3s ease-in-out';
     
-    const container = brain.parentElement;
-    container.style.position = 'relative';
-    container.appendChild(hippoText);
+    textContainer.appendChild(hippoText);
     
     activeHippoText = hippoText;
     updateTextPositions();
@@ -306,9 +312,7 @@ prefrontal.addEventListener('click', () => {
     frontalText.style.opacity = '0';
     frontalText.style.transition = 'opacity 0.3s ease-in-out';
     
-    const container = brain.parentElement;
-    container.style.position = 'relative';
-    container.appendChild(frontalText);
+    textContainer.appendChild(frontalText);
     
     activeFrontalText = frontalText;
     updateTextPositions();
@@ -345,9 +349,7 @@ temporal.addEventListener('click', () => {
     tempText.style.opacity = '0';
     tempText.style.transition = 'opacity 0.3s ease-in-out';
     
-    const container = brain.parentElement;
-    container.style.position = 'relative';
-    container.appendChild(tempText);
+    textContainer.appendChild(tempText);
     
     activeTempText = tempText;
     updateTextPositions();
@@ -384,9 +386,7 @@ parietal.addEventListener('click', () => {
     parText.style.opacity = '0';
     parText.style.transition = 'opacity 0.3s ease-in-out';
     
-    const container = brain.parentElement;
-    container.style.position = 'relative';
-    container.appendChild(parText);
+    textContainer.appendChild(parText);
     
     activeParText = parText;
     updateTextPositions();
@@ -423,9 +423,7 @@ occipital.addEventListener('click', () => {
     occiText.style.opacity = '0';
     occiText.style.transition = 'opacity 0.3s ease-in-out';
     
-    const container = brain.parentElement;
-    container.style.position = 'relative';
-    container.appendChild(occiText);
+    textContainer.appendChild(occiText);
     
     activeOcciText = occiText;
     updateTextPositions();
