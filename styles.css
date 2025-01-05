@@ -234,6 +234,31 @@ div {
     text-align: left;
 }
 
+.devin-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 80%;
+    max-width: 80%;
+    margin: 2rem auto;
+}
+
+.devin-item {
+    width: 100%;
+}
+
+.devin-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.book-item img {
+    width: 100%;
+}
+
+
 
 .books-grid {
     display: grid;
@@ -308,7 +333,8 @@ h1.devin {
 }
 
 .devin-logo{
-    max-width: 5%;
+    max-width: 2em;
+    padding-bottom: 1em;
 }
 
 p.devin {
