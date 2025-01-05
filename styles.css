@@ -332,6 +332,11 @@ img.devin {
     margin-right: calc(-50vw + 50%);
 }
 
+@media screen and (max-width: 768px) {
+    img.devin {
+        max-width: 100%;
+    }
+
 img.devin-big {
     max-width: 260%;
     margin-left: calc(-50vw + 47%);
