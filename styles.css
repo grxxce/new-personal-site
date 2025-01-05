@@ -301,8 +301,12 @@ img.devin {
 }
 
 h1.devin {
-    padding-top: 1em;
+    padding-top: 0em;
     padding-bottom: 0em;
+}
+
+.devin-logo{
+    max-width: 5%;
 }
 
 p.devin {
