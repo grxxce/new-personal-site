@@ -336,6 +336,7 @@ img.devin {
     img.devin {
         max-width: 100%;
     }
+}
 
 img.devin-big {
     max-width: 260%;
@@ -349,7 +350,7 @@ h1.devin {
 }
 
 .devin-logo{
-    max-width: 2em;
+    max-width: 1%;
     padding-bottom: 1em;
 }
 
