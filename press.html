@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html lang="en">
+
+<style>
+    /* Modal styles */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        overflow: hidden;
+    }
+    
+    .modal-content {
+        position: relative;
+        margin: auto;
+        display: block;
+        width: 90%;
+        height: 95%;
+        max-width: 100vw;
+        max-height: 100vh;
+        object-fit: contain;
+        padding: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .modal-content {
+        position: relative;
+        margin: auto;
+        display: block;
+        width: 100%;
+        height: 80%;
+        max-width: 100%;
+        max-height: 100vh;
+        object-fit: contain;
+        padding: 20px;
+    }
+    }
+    
+    .close {
+        position: fixed;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    /* Add pointer cursor to all images except logo */
+    img:not(.devin-logo) {
+        cursor: pointer;
+    }
+    
+    </style>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Create modal element
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.innerHTML = `
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img">
+        `;
+        document.body.appendChild(modal);
+    
+        // Get the modal elements
+        const modalImg = document.getElementById("modal-img");
+        const closeBtn = document.getElementsByClassName("close")[0];
+    
+        // Add click event to all images except logo
+        const images = document.getElementsByTagName('img');
+        for(let img of images) {
+            if(!img.classList.contains('devin-logo')) {
+                img.onclick = function() {
+                    modal.style.display = "flex";
+                    modalImg.src = this.src;
+                }
+            }
+        }
+    
+        // Close modal when clicking X
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+    
+        // Close modal when clicking outside image
+        modal.onclick = function(e) {
+            if(e.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    
+        // Close modal with escape key
+        document.addEventListener('keydown', function(e) {
+            if(e.key === 'Escape') {
+                modal.style.display = "none";
+            }
+        });
+    });
+    </script>
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP3P0QVPGF"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZP3P0QVPGF');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My personal site">
+    <title>Grace Li</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="assets/logo.ico" type="favicon/ico" />
+    <link id="favicon" rel="icon" href="assets/favicon-active.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Grace</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html#About">About</a></li>
+                <li><a href="index.html#Inspiration">Inspiration</a></li>
+                <li><a href="index.html#Thoughts">Thoughts</a></li>
+                <li><a href="index.html#Art">Art</a></li>
+                <li><a href="index.html#Contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <p class="center bold">Golden Press.</p>
+    <main>
+        <p>A ridiculously cozy and satisfying local note-taking app. Made for MacOS.</p>
+        
+        <img src="assets/press/image.png" class="devin">
+        <p class="center">Coded by Grace</p>
+
+        <p>I built this macOS note-taking app because my favorite theme——Golden Coffee made by the incredible <a href="https://forum.obsidian.md/t/golden-coffee-theme/21952">Kinmury</a>——was tragically discontinued on Obsidian. That eazy-on-the-eyes theme had real mind control over me because, without it, I stopped writing my journal reflections. To fix that, I built an entirely local note-taking app for MacOS that replicates that theme. Submitted to app review on Jan 8, 2025. Will update this site upon approval :)</p>
+
+
+    </main>
+</body>
+
+</html>
